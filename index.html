@@ -15,12 +15,21 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-text
+    <a-assets>
+      <video 
+        id="penguin-sledding" 
+        autoplay loop="true" 
+        src="https://www.youtube.com/embed/RXFus7qYSbY"
+        look-at="[gps-camera]"
+        gps-entity-place="latitude: 43.643627; longitude: -79.400245;">
+      </video>
+    </a-assets>
+      <!-- <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
         scale="120 120 120"
         gps-entity-place="latitude: 43.643627; longitude: -79.400245;"
-      ></a-text>
+      ></a-text> -->
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
