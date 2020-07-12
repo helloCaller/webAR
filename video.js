@@ -4,6 +4,10 @@ AFRAME.registerComponent('vidhandler', {
       this.toggle = false;
       this.vid = document.querySelector("#videoID")
       this.vid.pause();
+      var texture = new THREE.VideoTexture( this.vid );
+      texture.minFilter = THREE.LinearFilter;
+      texture.magFilter = THREE.LinearFilter;
+      texture.format = THREE.RGBFormat;
   },
   tick: function () {
       if (this.el.object3D.visible == true) {
@@ -13,7 +17,7 @@ AFRAME.registerComponent('vidhandler', {
           }
       } else {
           this.toggle = false;
-          this.vid.pause();
+          this.vid.play();
       }
   }
 });
