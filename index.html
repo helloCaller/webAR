@@ -4,31 +4,41 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="video.js"></script>
+   
 
     <meta name="apple-mobile-web-app-capable" content="yes">
   </head>
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
+    <!-- <a-scene embedded arjs>
         <a-assets>
-            <video crossorigin="anonymous" autoplay id="videoID" src="https://cdn.glitch.com/a4f0f27a-bdbc-48c7-aba4-eb188f25145f%2Ftroy3.mp4?v=1594612494987"> 
+            <video crossorigin="anonymous" id="videoID" src="./troy2.mp4"> 
               
             </video> 
         </a-assets>
       <a-marker preset="hiro">
-        <!-- <a-entity
-        position="0 0.5 0"
-        scale="0.01 0.01 0.01"
-        gltf-model="/astro.glb"
-      ></a-entity> --> 
+       
           
         <a-video src="#videoID" width="1.4375" height="1" rotation="270 0 0"></a-video>
-
       </a-marker>
       <a-entity camera></a-entity>
+    </a-scene> -->
+
+    <a-scene>
+        
+            <a-assets>
+              <video id="penguin-sledding" autoplay loop="true" src="troy2.mp4"></video>
+            </a-assets>
+          
+            <!-- Using the asset management system. -->
+            <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+          
+       
+          
     </a-scene>
   </body>
 </html>
+
+
 
 
 
